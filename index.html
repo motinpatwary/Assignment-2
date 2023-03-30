@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-2</title>
+</head>
+<body>
+    <form action="">
+        Width: <input type="number" id="weightInput"><br/><br/>
+        Height: <input type="number" id="heightInput"><br/><br/>
+        <button id="calculateBtn" onclick="BMI()">Button</button><br/><br/>
+        BMI: <h2 id="result"></h2>
+    </form>
+
+    <script>
+        function BMI() {
+            var weight = document.getElementById('weightInput').value;
+            var height = document.getElementById('heightInput').value;
+
+            var bmi = weight/(height * height);
+
+            var personBMI = document.getElementById('result');
+            personBMI.innerHTML = bmi.toFixed(2);
+    }
+    </script>
+</body>
+</html>
